@@ -42,7 +42,6 @@ subroutine matrix_vector_product_ij(matrix, vector, size, result)
 
     integer :: i, j
     
-    result = 0.0
     do i = 1, size
         do j = 1, size
             result(i) = result(i) +  matrix(i, j) * vector(j);
@@ -59,7 +58,6 @@ subroutine matrix_vector_product_ji(matrix, vector, size, result)
 
     integer :: i, j
 
-    result = 0.0
     do j = 1, size
         do i = 1, size
             result(i) = result(i) +  matrix(i, j) * vector(j);
