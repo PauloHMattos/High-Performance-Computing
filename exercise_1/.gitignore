@@ -1,11 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/fortran
-# Edit at https://www.toptal.com/developers/gitignore?templates=fortran
-
-### Fortran ###
-# Prerequisites
-*.d
-
 # Compiled Object files
+**/.DS_Store
 *.slo
 *.lo
 *.o
@@ -35,43 +29,27 @@
 *.out
 *.app
 
-# End of https://www.toptal.com/developers/gitignore/api/fortran
+**/cmake-build-debug
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/install_manifest.txt
+**/CMakeFiles/
+**/CTestTestfile.cmake
+**/Makefile
+**/*.cbp
+**/CMakeScripts
+**/compile_commands.json
 
-# Created by https://www.toptal.com/developers/gitignore/api/c++
-# Edit at https://www.toptal.com/developers/gitignore?templates=c++
+include/divisible/*
 
-### C++ ###
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+## Local 
 
-# Precompiled Headers
-*.gch
-*.pch
+.idea/*.xml
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+build/**/*
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# End of https://www.toptal.com/developers/gitignore/api/c++
+include/*
+lib/*
+bin/*
+test/test_runner
