@@ -31,11 +31,11 @@ program product
     call generate_random_vector(size, vector)
     call generate_random_matrix(size, size, matrix)
 
-    if (order == 1) then
+    if (order == 0) then
         call cpu_time(start) 
         call matrix_vector_product_ij(matrix, vector, size, result)
         call cpu_time(finish) 
-    else if (order == 0) then
+    else if (order == 1) then
         call cpu_time(start) 
         call matrix_vector_product_ji(matrix, vector, size, result)
         call cpu_time(finish) 

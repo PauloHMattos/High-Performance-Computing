@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     // Allocate a clear vector to be the result of the product
     double *result = new_vector(size);
 
-    if (order == 1)
+    if (order == 0)
     {
         start = clock();
         matrix_vector_product_ij(matrix, vector, size, result);
