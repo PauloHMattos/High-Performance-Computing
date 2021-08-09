@@ -62,17 +62,15 @@ void line_product_ij(double **matrix, double *vector, int size, int row_index, d
 {
    for (int j = 0; j < size; j++)
    {
-      //printf("%.6f * %.6f\n", matrix[row_index][j], vector[j]);
       result[row_index] += matrix[row_index][j] * vector[j];
    }
 }
 
-void line_product_ji(double **matrix, double *vector, int size, int col_index, double *result)
+void line_product_ji(double **matrix, double *vector, int size, int row_index, double *result)
 {
    for (int i = 0; i < size; i++)
    {
-      //printf("%.6f * %.6f\n", matrix[i][col_index], vector[i]);
-      result[col_index] += matrix[i][col_index] * vector[i];
+      result[row_index] += matrix[i][row_index] * vector[i];
    }
 }
 
