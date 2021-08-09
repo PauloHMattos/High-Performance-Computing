@@ -1,5 +1,6 @@
 import platform
 import subprocess
+import os
 
 def run_program(path, n, order):
     if platform.system() == 'Windows':
@@ -9,7 +10,11 @@ def run_program(path, n, order):
     return result.stdout.decode('utf-8').lstrip()
 
 def run(program, order):
-    output_path = '{}/outputs/order_{}.csv'.format(program, order)
+    folder = '{}/outputs/'.format(program)
+    if not os.path.exists(folder):
+        os.mkdir(folder)
+
+    output_path = '{}/order_{}.csv'.format(folder, order)
     with open(output_path, 'w', newline='') as f:
         f.write("# Number; Time(s)\n")
         for n in range(0, 28000, 1000):
