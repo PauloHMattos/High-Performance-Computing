@@ -16,4 +16,4 @@ pip install -r requirements.txt
 After installing the packages, run the `runner.py` to execute the binaries and generate the csv output with the data.
 
 ## Results
-A report was made as part of the assignment (in portuguese), and can be read ()[here]
+A report was made as part of the assignment (in portuguese), and can be read in `Trabalho_4.pdf`
